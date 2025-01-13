@@ -1,0 +1,59 @@
+# Calculadora de Economia de Energia
+
+Este projeto consiste em uma função de cálculo de economia de energia para diferentes classes de consumidores (Residencial, Comercial e Industrial). A função calcula a economia anual e mensal com base no consumo médio de energia, tarifa por kWh e tipo de consumidor. A função também aplica descontos e coberturas baseadas na faixa de consumo.
+
+## Funcionalidade
+
+A função `calculadora` calcula a economia de energia anual e mensal, considerando:
+
+- Consumo médio de energia (em kWh) de um determinado período.
+- A tarifa por kWh.
+- A classe do consumidor (Residencial, Comercial ou Industrial).
+
+Além disso, a função aplica:
+
+- **Desconto**: Dependendo da classe do consumidor e da faixa de consumo.
+- **Cobertura**: Dependendo da faixa de consumo.
+
+## Como Funciona
+
+### Parâmetros de Entrada
+
+A função `calculadora` recebe três parâmetros:
+
+1. **consumo** (list): Lista de valores de consumo de energia (em kWh).
+2. **tarifa** (float): Tarifa cobrada por kWh de energia.
+3. **classe** (str): A classe do consumidor (pode ser "Residencial", "Comercial" ou "Industrial").
+
+### Cálculos Realizados
+
+1. **Cálculo da Faixa de Consumo**: Com base na média do consumo, a função determina a faixa do consumo:
+    - `< 10.000 kWh`
+    - `>= 10.000 kWh e <= 20.000 kWh`
+    - `> 20.000 kWh`
+
+2. **Desconto e Cobertura**: A função aplica o desconto e a cobertura baseados na faixa de consumo e na classe do consumidor.
+
+3. **Economia Mensal**: Calculada pela fórmula:
+    ```python
+    Economia Mensal = Tarifa * Consumo Médio * Desconto Aplicado * Cobertura
+    ```
+
+4. **Economia Anual**: A economia anual é simplesmente a economia mensal multiplicada por 12:
+    ```python
+    Economia Anual = Economia Mensal * 12
+    ```
+
+### Saída
+
+A função retorna uma tupla com os seguintes valores:
+
+1. **Economia Anual**: A economia anual (em reais) arredondada para 2 casas decimais.
+2. **Economia Mensal**: A economia mensal (em reais) arredondada para 2 casas decimais.
+3. **Desconto Aplicado**: O desconto aplicado, de acordo com a classe do consumidor e faixa de consumo.
+4. **Cobertura**: A cobertura aplicada, de acordo com a faixa de consumo.
+
+### Exemplos de Uso
+
+```python
+# Exemplo 1: Clas

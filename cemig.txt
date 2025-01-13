@@ -1,0 +1,18 @@
+Projeto de Extração de Tarifas - Cemig
+Este projeto tinha como objetivo extrair as tarifas de energia elétrica das bandeiras tarifárias (vermelha, verde, amarela) do site da Cemig, utilizando a biblioteca Selenium para automação do navegador.
+
+🚨 Problema Encontrado
+Apesar de todas as tentativas, o código não conseguiu finalizar corretamente o processo do Selenium, resultando em um erro de "Permission Denied" ao tentar fechar o navegador.
+
+🔧 Tecnologias Utilizadas
+Python 3.x
+Selenium
+ChromeDriver
+❗ Erro ao Rodar o Script
+Durante a execução, foi encontrado o seguinte erro ao tentar finalizar o processo:
+
+makefile
+Copiar código
+PermissionError: [Errno 13] Permission denied
+Este erro está relacionado a problemas de permissão ao tentar encerrar o processo do ChromeDriver.
+
