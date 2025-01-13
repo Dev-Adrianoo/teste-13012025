@@ -10,9 +10,6 @@ Selenium
 ChromeDriver
 ❗ Erro ao Rodar o Script
 Durante a execução, foi encontrado o seguinte erro ao tentar finalizar o processo:
-
-makefile
-Copiar código
 PermissionError: [Errno 13] Permission denied
 Este erro está relacionado a problemas de permissão ao tentar encerrar o processo do ChromeDriver.
 
